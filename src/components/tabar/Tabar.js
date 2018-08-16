@@ -5,7 +5,7 @@ import Wetao from '../wetao/Wetao'
 import Xiaoxi from '../xiaoxi/Xiaoxi'
 import Shopcar from '../shopcar/Shopcar'
 import Mytaos from '../mytaos/Mytaos'
-
+import Shoppings from '../shoppings/Shoppings'
 import './tabar.css'
 
 class Tabar extends Component {
@@ -30,14 +30,14 @@ class Tabar extends Component {
                             <div>我的淘宝</div>
                         </NavLink> 
                     </div>
-                        <div>
-                            <Route exact path="/" component={Home}/>
-                            <Route path="/weitao" component={Wetao}/>
-                            <Route path="/xiaoxi" component={Xiaoxi}/>
-                            <Route path="/shopcar" component={Shopcar}/>
-                            <Route path="/mytaos" component={Mytaos}/> 
-                        </div>
-                        
+                    <div>
+                        <Route exact path="/" component={Home}/>
+                        <Route path="/weitao" component={Wetao}/>
+                        <Route path="/xiaoxi" component={Xiaoxi}/>
+                        <Route path="/shopcar" component={Shopcar}/>
+                        <Route path="/mytaos" component={Mytaos}/> 
+                        <Route path="/shoppings/:id" component={Shoppings}/>
+                    </div>
                 </div>
             </Router>
             
