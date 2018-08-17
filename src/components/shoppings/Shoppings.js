@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {getHomedata} from '../../api/api'
+import PubSub from 'pubsub-js'
 import './shoppings.css';
 
 class Shoppings extends Component {
@@ -16,10 +17,16 @@ class Shoppings extends Component {
             console.log(this.state.data.video)
         })
     }
+    addShopcars(){
+       console.log(this)
+       PubSub.publish('PubSubId',this.state.data.video)
+       console.log(this.state.data.video)
+    }
   render() {
     return (
-      <div className="container">
-          <video controls="controls"  src={this.state.data.video}></video> 
+      <div className="shopContainer">
+          <video controls="controls" className="videos" src={this.state.data.video}></video> 
+          <button className="addShopcars" onClick={this.addShopcars.bind(this)}>加入购物车</button>
       </div>
     );
   }

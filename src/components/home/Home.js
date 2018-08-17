@@ -17,7 +17,7 @@ class Home extends Component{
      render(){
         const dataList = this.state.data
        return(
-                <div className="container">
+                <div className="homeContainer">
                     {   
                         dataList.map((item,index)=>{
                             return(

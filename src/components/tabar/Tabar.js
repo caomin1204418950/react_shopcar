@@ -9,6 +9,10 @@ import Shoppings from '../shoppings/Shoppings'
 import './tabar.css'
 
 class Tabar extends Component {
+    // constructor(props){
+    //     super(props);
+    //     console.log(this)
+    // }
     render(){
         return(
             <Router>
