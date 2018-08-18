@@ -1,22 +1,15 @@
 import React, { Component } from 'react';
-import {HashRouter as Router , Route, NavLink} from 'react-router-dom';
-import Home from '../home/Home'
-import Wetao from '../wetao/Wetao'
-import Xiaoxi from '../xiaoxi/Xiaoxi'
-import Shopcar from '../shopcar/Shopcar'
-import Mytaos from '../mytaos/Mytaos'
-import Shoppings from '../shoppings/Shoppings'
+import {NavLink} from 'react-router-dom';
 import './tabar.css'
 
 class Tabar extends Component {
-    // constructor(props){
-    //     super(props);
-    //     console.log(this)
-    // }
+    constructor(props){
+        super(props);
+        // console.log(this.props)
+    }
     render(){
         return(
-            <Router>
-                <div className="container">
+                <div className="tabarContainer">
                     <div className="tabar">
                         <NavLink to="/"className="tabar_item">
                             <div>首页</div>
@@ -34,17 +27,7 @@ class Tabar extends Component {
                             <div>我的淘宝</div>
                         </NavLink> 
                     </div>
-                    <div>
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/weitao" component={Wetao}/>
-                        <Route path="/xiaoxi" component={Xiaoxi}/>
-                        <Route path="/shopcar" component={Shopcar}/>
-                        <Route path="/mytaos" component={Mytaos}/> 
-                        <Route path="/shoppings/:id" component={Shoppings}/>
-                    </div>
                 </div>
-            </Router>
-            
         )
         
     }

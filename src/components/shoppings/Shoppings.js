@@ -4,6 +4,7 @@ import PubSub from 'pubsub-js'
 import './shoppings.css';
 
 class Shoppings extends Component {
+    
     state={
         data:['数据没到']
     }
@@ -18,9 +19,9 @@ class Shoppings extends Component {
         })
     }
     addShopcars(){
-       console.log(this)
-       PubSub.publish('PubSubId',this.state.data.video)
-       console.log(this.state.data.video)
+       
+       PubSub.publish('PubSubData',this.state.data)
+       
     }
   render() {
     return (

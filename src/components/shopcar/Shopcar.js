@@ -1,17 +1,20 @@
 import React, { Component } from 'react'
 import PubSub from 'pubsub-js'
+import Tabar from '../../common/tabar/Tabar'
+
 import './shopcar.css';
 
 class Shopcar extends Component {
-  componentWillMount(){
-    // PubSub.subscribe('')
-    console.log(1)
 
+  componentWillMount(){
+    
   }
   render() {
     return (
       <div className="shopContainer">
         shopcar
+
+        <Tabar/>
       </div>
     );
   }

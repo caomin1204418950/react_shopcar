@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {getHomedata} from '../../api/api'
 import {NavLink} from 'react-router-dom'
+import Tabar from '../../common/tabar/Tabar'
 import './home.css'
 
 class Home extends Component{
@@ -27,6 +28,7 @@ class Home extends Component{
                             )
                         })
                     }
+                    <Tabar/>
                 </div>
         )
     }
